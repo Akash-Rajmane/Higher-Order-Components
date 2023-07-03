@@ -27,7 +27,9 @@ setFontSize((size) => size + props.number);
     );
 
 };
+
 return NewComponent;
+
 };
 
 export default HigherOrderComponent;
@@ -38,11 +40,10 @@ import HigherOrderComponent from "./UpdatedComponent";
 const HoverIncrease = (props) => {
 const { fontSize, increaseFont } = props;
 return (
-
-<div>
-<button onMouseOver={increaseFont}>Increase font on hover</button>
-<p style={{ fontSize }}>Size of font : {fontSize}</p>
-</div>
+    <div>
+        <button onMouseOver={increaseFont}>Increase font on hover</button>
+        <p style={{ fontSize }}>Size of font : {fontSize}</p>
+    </div>
 );
 };
 
