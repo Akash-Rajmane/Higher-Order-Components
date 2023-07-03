@@ -10,7 +10,7 @@ Code reuse, logic and bootstrap abstraction.
 Render hijacking.
 State abstraction and manipulation.
 Props manipulation.
-
+```
 const HigherOrderComponent = (WrappedComponent) => {
 const NewComponent = (props) => {
 const [fontSize, setFontSize] = useState(10);
@@ -48,7 +48,7 @@ return (
 };
 
 export default HigherOrderComponent(HoverIncrease);
-
+```
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
