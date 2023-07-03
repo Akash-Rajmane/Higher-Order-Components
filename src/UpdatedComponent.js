@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const UpdatedComponent = (WrappedComponent) => {
+const HigherOrderComponent = (WrappedComponent) => {
   const NewComponent = (props) => {
     const [fontSize, setFontSize] = useState(10);
     const increaseFont = () => {
@@ -18,4 +18,4 @@ const UpdatedComponent = (WrappedComponent) => {
   return NewComponent;
 };
 
-export default UpdatedComponent;
+export default HigherOrderComponent;

@@ -1,5 +1,5 @@
 import React from "react";
-import UpdatedComponent from "./UpdatedComponent";
+import HigherOrderComponent from "./UpdatedComponent";
 
 const ClickIncrease = (props) => {
   const { fontSize, increaseFont } = props;
@@ -11,4 +11,4 @@ const ClickIncrease = (props) => {
   );
 };
 
-export default UpdatedComponent(ClickIncrease);
+export default HigherOrderComponent(ClickIncrease);

@@ -1,3 +1,53 @@
+### Higher Order Components:
+
+#### A higher-order component is a function that takes a component and returns a new component.
+
+#### A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React’s compositional nature.
+
+HOC can be used for many use cases:
+
+Code reuse, logic and bootstrap abstraction.
+Render hijacking.
+State abstraction and manipulation.
+Props manipulation.
+
+const HigherOrderComponent = (WrappedComponent) => {
+const NewComponent = (props) => {
+const [fontSize, setFontSize] = useState(10);
+const increaseFont = () => {
+setFontSize((size) => size + props.number);
+};
+
+    return (
+      <WrappedComponent
+        fontSize={fontSize}
+        increaseFont={increaseFont}
+        {...props}
+      />
+    );
+
+};
+return NewComponent;
+};
+
+export default HigherOrderComponent;
+
+import React from "react";
+import HigherOrderComponent from "./UpdatedComponent";
+
+const HoverIncrease = (props) => {
+const { fontSize, increaseFont } = props;
+return (
+
+<div>
+<button onMouseOver={increaseFont}>Increase font on hover</button>
+<p style={{ fontSize }}>Size of font : {fontSize}</p>
+</div>
+);
+};
+
+export default HigherOrderComponent(HoverIncrease);
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,5 +1,5 @@
 import React from "react";
-import UpdatedComponent from "./UpdatedComponent";
+import HigherOrderComponent from "./UpdatedComponent";
 
 const HoverIncrease = (props) => {
   const { fontSize, increaseFont } = props;
@@ -11,4 +11,4 @@ const HoverIncrease = (props) => {
   );
 };
 
-export default UpdatedComponent(HoverIncrease);
+export default HigherOrderComponent(HoverIncrease);
